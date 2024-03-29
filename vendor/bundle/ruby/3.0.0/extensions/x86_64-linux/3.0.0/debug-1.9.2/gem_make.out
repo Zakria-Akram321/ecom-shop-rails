@@ -1,0 +1,16 @@
+current directory: /home/fareed/Desktop/RubyonRails/ecom_shop/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
+/home/fareed/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/fareed/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20240330-4327-v7cya4.rb extconf.rb
+creating Makefile
+
+current directory: /home/fareed/Desktop/RubyonRails/ecom_shop/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
+make "DESTDIR=" clean
+
+current directory: /home/fareed/Desktop/RubyonRails/ecom_shop/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
+make "DESTDIR="
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/fareed/Desktop/RubyonRails/ecom_shop/vendor/bundle/ruby/3.0.0/gems/debug-1.9.2/ext/debug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug.so ./.gem.20240330-4327-1ca0g3/debug
