@@ -70,3 +70,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "tailwindcss-rails", "~> 2.3"
+
+gem 'carrierwave', '~> 3.0'
+
+gem "font-awesome-sass", "~> 6.5.1"

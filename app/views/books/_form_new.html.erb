@@ -1,0 +1,36 @@
+<!-- component -->
+  <div class="min-h-screen md:px-20 pt-2">
+    <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
+      <%= form_with model: @book do |form| %>
+        <div class="space-y-4">
+          <div>
+            <%= form.label :title, class: "text-lx" %>
+            <%= form.text_field :title, class: "w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg" %>
+          </div>
+          <div>
+            <%= form.label :author, class: "text-lx" %>
+            <%= form.text_field :author, class: "w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg" %>
+          </div>
+          <div>
+            <%= form.label :quality, class: "text-lx" %>
+            <%= form.text_field :quality, class: "w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg" %>
+          </div>
+          <div>
+            <%= form.label :condition, class: "text-lx" %>
+            <%= form.text_field :condition, class: "w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg" %>
+          </div>
+          <div>
+            <%= form.label :price, class: "text-lx" %>
+            <%= form.text_field :price, class: "w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg" %>
+          </div>
+          <div>
+            <%= form.label :description, class:"" %>
+            <%= form.text_area :description, class:"w-full font-serif p-4 mt-1 text-gray-600 outline-none rounded-lg resize-none", rows:5 %>
+          </div>
+          <div class="text-center">
+            <%= form.submit "Submit", class:"bg-green-600 py-3 px-16 rounded-lg text-white font-bold" %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>

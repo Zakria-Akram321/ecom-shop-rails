@@ -1,0 +1,42 @@
+<div>
+  <h1 class="font-bold text-4xl mb-7">All Books Here!</h1>
+
+  <div class="text-right">
+    <%= link_to "Add New Book", new_book_path, class:"bg-[#00cc88] text-white px-7 py-3 rounded-lg font-bold" %>
+  </div>
+   <!-- component -->
+  <div class="flex align-middle gap-7 w-full py-8">
+    <%# Single product card %>
+    <% @books.each do |book| %>
+    <div class="shadow-lg hover:shadow-xl rounded-2xl w-1/4 px-5 py-7 bg-[#f0efef] relative cursor-pointer">
+        <div class="<%= book.condition == "New" ?  'bg-green-700' : 'bg-red-700' %> px-10 py-2 text-white font-bold rounded-bl-lg rounded-tr-lg absolute right-0 top-0">
+          <%= book.condition %>
+        </div>
+        
+        <div class="flex items-center justify-center mt-5">
+          <%= image_tag("harry_potter2.png", class:"w-3/4 object-cover") %>
+        </div>
+        <div class="mt-5">
+          <div>
+            <h2 class="text-2xl font-bold capitalize">
+              <%= truncate(book.title, length:28)%>
+            </h2>
+          </div>
+          <div class="pt-2">
+            <p><%= "#{truncate(book.description, length:170, separator:' ')}"%> </p>
+          </div>
+          <div class="flex justify-between pt-3">
+            <p><strong> Author: </strong>  <%= book.author %> </p>
+            <p><strong> Price: </strong> <span class="italic"> <%= "$#{book.price}"%> </span></p>
+          </div>
+          <div class="flex gap-2 flex-col items-center pt-5">
+            <a href="/books/<%= book.id %>" class="bg-red-900 hover:bg-red-800 text-white font-bold text-lg w-full py-3 rounded-lg text-center">
+              <button >Details</button>
+            </a>
+            <button class="bg-[#00cc88] hover:bg-[#00cc66] text-white font-bold text-lg w-full py-3 rounded-lg">Buy now</button>
+          </div>
+        </div>
+    </div>
+    <%end%>
+  </div>
+</div>

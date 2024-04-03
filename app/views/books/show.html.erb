@@ -1,0 +1,36 @@
+<div class="flex flex-col justify-center w-[70%] mx-auto my-0 min-h-screen">
+  <a class="ml-6 text-red-900" href="/books"> <-- <span >Back</span> </a>
+  <div class="flex gap-10 items-start mt-4">
+    <div class="flex items-center justify-center w-2/4">
+      <%= image_tag("harry_potter2.png", class:"w-[90%] object-cover ") %>
+    </div>
+    <div class="w-2/4">
+      <div class="mb-4">
+        <h2 class="font-bold text-5xl capitalize"><%= @book.title %></h2>
+      </div>
+      <div class="mb-4">
+        <p><%= @book.description %></p>
+      </div>
+      <div class="flex gap-3 flex-col">
+        <p><strong> Author: </strong>  <%= @book.author %> </p>
+        <p><strong> Quality: </strong> <span> <%= @book.quality%> </span></p>
+      </div>
+      <div class="mt-7">
+        <h3 class="font-bold"><span class="text-6xl"> <%= "$#{@book.price}"%> </span></h3>
+      </div>
+      <div class="flex gap-3 flex-col items-center mt-10">
+        <button class="w-full">
+          <%= link_to "Edit", edit_book_path(@book), class:"bg-[#00cc88] hover:bg-[#00cc66] py-4 text-white font-bold rounded-lg w-full block text-center" %>
+        </button>
+          <div class="w-full">
+            <%= link_to "Destroy", book_path(@book), data:{
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?",
+            }, class:"bg-red-900 hover:bg-red-800 py-4 text-white font-bold rounded-lg w-full block text-center"
+            
+            %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
